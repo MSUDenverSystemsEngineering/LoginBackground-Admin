@@ -122,7 +122,7 @@ Try {
 			Write-Log -Message "Removing previous customized backgrounds before continuing." -Severity 1 -Source $deployAppScriptFriendlyName
 			Remove-File -Path "${envSystem32Directory}\oobe\info\backgrounds\*" -Recurse
 		} Else {
-			Write-Log -Message "No previous customized backgrounds found. Continuing to login background customization." -Severity 1 -Source $deployAppScriptFriendlyName
+			Write-Log -Message "No previous customized backgrounds found. Creating customized backgrounds directory." -Severity 1 -Source $deployAppScriptFriendlyName
 			New-Folder -Path "${envSystem32Directory}\oobe\info\backgrounds"
 		}
 
