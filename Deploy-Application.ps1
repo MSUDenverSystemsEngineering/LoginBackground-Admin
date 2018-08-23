@@ -54,7 +54,11 @@ Param (
 
 Try {
 	## Set the script execution policy for this process
+<<<<<<< HEAD
 	Try { Set-ExecutionPolicy -ExecutionPolicy 'ByPass' -Scope 'Process' -Force -ErrorAction 'Stop' } Catch { Write-Error "Failed to set the execution policy to Bypass for this process." }
+=======
+	Try { Set-ExecutionPolicy -ExecutionPolicy 'ByPass' -Scope 'Process' -Force -ErrorAction 'Stop' } Catch {Write-Error -Message "Unable to set the PowerShell Execution Policy to Bypass for this process."}
+>>>>>>> origin/master
 
 	##*===============================================
 	##* VARIABLE DECLARATION
@@ -62,12 +66,20 @@ Try {
 	## Variables: Application
 	[string]$appVendor = 'MSU Denver'
 	[string]$appName = 'Login Background'
+<<<<<<< HEAD
 	[string]$appVersion = 'Admin'
+=======
+	[string]$appVersion = 'Administrative'
+>>>>>>> origin/master
 	[string]$appArch = ''
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
 	[string]$appScriptVersion = '1.1.0'
+<<<<<<< HEAD
 	[string]$appScriptDate = '01/11/2018'
+=======
+	[string]$appScriptDate = '01/12/2018'
+>>>>>>> origin/master
 	[string]$appScriptAuthor = 'Quan Tran/Jordan Hamilton'
 	##*===============================================
 	## Variables: Install Titles (Only set here to override defaults set by the toolkit)
@@ -77,7 +89,11 @@ Try {
 	##* Do not modify section below
 	#region DoNotModify
 
+<<<<<<< HEAD
 		## Variables: Exit Code
+=======
+	## Variables: Exit Code
+>>>>>>> origin/master
 	[int32]$mainExitCode = 0
 
 	## Variables: Script
@@ -183,7 +199,11 @@ Try {
 		}
 
 		# <Perform Uninstallation tasks here>
+<<<<<<< HEAD
 		Remove-File -Path "${envSystem32Directory}\oobe\info\backgrounds\backgroundDefault.jpg"
+=======
+		Remove-File -Path "${envSystem32Directory}\oobe\info\backgrounds\defaultBackground.jpg"
+>>>>>>> origin/master
 		Remove-RegistryKey -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\Background" -Name "OEMBackground"
 
 		##*===============================================
@@ -211,10 +231,17 @@ Catch {
 	Exit-Script -ExitCode $mainExitCode
 }
 # SIG # Begin signature block
+<<<<<<< HEAD
 # MIIfagYJKoZIhvcNAQcCoIIfWzCCH1cCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
 # KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAesmTHVLogUdEa
 # QwBfvEOFAmjYi5Uq1rPXe1mfE1nbpKCCGdcwggQUMIIC/KADAgECAgsEAAAAAAEv
+=======
+# MIIU4wYJKoZIhvcNAQcCoIIU1DCCFNACAQExDzANBglghkgBZQMEAgEFADB5Bgor
+# BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBKg8D+imI6Bn77
+# 34guheyWdZAaWsK/98c2XuO05R38gqCCD4cwggQUMIIC/KADAgECAgsEAAAAAAEv
+>>>>>>> origin/master
 # TuFS1zANBgkqhkiG9w0BAQUFADBXMQswCQYDVQQGEwJCRTEZMBcGA1UEChMQR2xv
 # YmFsU2lnbiBudi1zYTEQMA4GA1UECxMHUm9vdCBDQTEbMBkGA1UEAxMSR2xvYmFs
 # U2lnbiBSb290IENBMB4XDTExMDQxMzEwMDAwMFoXDTI4MDEyODEyMDAwMFowUjEL
@@ -261,6 +288,7 @@ Catch {
 # MLyrvC1HNt+SIAPoccZY9nUFmjTwC1lagkQ0qoDkL4T2R12WybbKyp23prrkUNPU
 # N7i6IA7Q05IqW8RZu6Ft2zzORJ3BOCqt4429zQl3GhC+ZwoCNmSIubMbJu7nnmDE
 # Rqi8YTNsz065nLlq8J83/rU9T5rTTf/eII5Ol6b9nwm8TcoYdsmwTYVQ8oDSHQb1
+<<<<<<< HEAD
 # WAQHsRgwggV3MIIEX6ADAgECAhAT6ihwW/Ts7Qw2YwmAYUM2MA0GCSqGSIb3DQEB
 # DAUAMG8xCzAJBgNVBAYTAlNFMRQwEgYDVQQKEwtBZGRUcnVzdCBBQjEmMCQGA1UE
 # CxMdQWRkVHJ1c3QgRXh0ZXJuYWwgVFRQIE5ldHdvcmsxIjAgBgNVBAMTGUFkZFRy
@@ -379,4 +407,68 @@ Catch {
 # 7UASWM17nnzUV0FUZdWMsJa3z2sm4p/LvAGXWJwEAR9bFWI3sQWHY58rmcjmBAVd
 # chUvpCIF8h2jntTVew8mfPheR7GqvuiqgFa9udXn+xZrlsp+4XyEmL/bX6y3SIXN
 # jMt9QbFub5doxiJqVF72pcuBt3n+lTQUEJm7Dxeh
+=======
+# WAQHsRgwggbIMIIFsKADAgECAhN/AAAAIhO6jvua86/0AAEAAAAiMA0GCSqGSIb3
+# DQEBCwUAMGIxEzARBgoJkiaJk/IsZAEZFgNlZHUxGTAXBgoJkiaJk/IsZAEZFglt
+# c3VkZW52ZXIxFTATBgoJkiaJk/IsZAEZFgV3aW5hZDEZMBcGA1UEAxMQd2luYWQt
+# Vk1XQ0EwMS1DQTAeFw0xNjA1MjcyMTI0MDJaFw0xODA1MjcyMTI0MDJaMIG/MQsw
+# CQYDVQQGEwJVUzERMA8GA1UECBMIQ29sb3JhZG8xDzANBgNVBAcTBkRlbnZlcjEw
+# MC4GA1UEChMnTWV0cm9wb2xpdGFuIFN0YXRlIFVuaXZlcnNpdHkgb2YgRGVudmVy
+# MSgwJgYDVQQLEx9JbmZvcm1hdGlvbiBUZWNobm9sb2d5IFNlcnZpY2VzMTAwLgYD
+# VQQDEydNZXRyb3BvbGl0YW4gU3RhdGUgVW5pdmVyc2l0eSBvZiBEZW52ZXIwggEi
+# MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCxCPUOmGXq89WCOBso0z5QIApw
+# EosnzQeoI9zP+n8wEb7BEA//+UTmjIZHe3jP0dF6C7EFhx2FcZxs8XQgSH5bnwor
+# rkLMa1FzcP2GlcNE5F+ms1zk5Bp2x2nsMOcx+12h9A6eU+JR3nXfWFwkNfvOAKrj
+# 1mo4BO5TEvx4DtrVBYFli+0JGnALa1Hd7A68nYtG743FPbioQn8EQSnDr+Jjtd8l
+# vujd9I5IQPptiU3inmcoaG+UFz8HKu7QS/mOLpoz/kjbSShxdNF0mcFmowg8WYMu
+# f8f1trOtsmWJ3lpyroKek8Ie9oOnKw3And2dOgqWxVXnfLEhW8b6PElvZc73AgMB
+# AAGjggMXMIIDEzAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEw
+# GwYJKwYBBAGCNxUKBA4wDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUxu8skV6twX8T
+# i5hj8XjbzTUYeqgwHwYDVR0jBBgwFoAUbmigb8ibDuAf063cjbVhC57XDzQwggEo
+# BgNVHR8EggEfMIIBGzCCARegggEToIIBD4aBxWxkYXA6Ly8vQ049d2luYWQtVk1X
+# Q0EwMS1DQSgxKSxDTj1WTVdDQTAxLENOPUNEUCxDTj1QdWJsaWMlMjBLZXklMjBT
+# ZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPXdpbmFkLERD
+# PW1zdWRlbnZlcixEQz1lZHU/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNl
+# P29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50hkVodHRwOi8vVk1XQ0Ew
+# MS53aW5hZC5tc3VkZW52ZXIuZWR1L0NlcnRFbnJvbGwvd2luYWQtVk1XQ0EwMS1D
+# QSgxKS5jcmwwggE+BggrBgEFBQcBAQSCATAwggEsMIG6BggrBgEFBQcwAoaBrWxk
+# YXA6Ly8vQ049d2luYWQtVk1XQ0EwMS1DQSxDTj1BSUEsQ049UHVibGljJTIwS2V5
+# JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz13aW5h
+# ZCxEQz1tc3VkZW52ZXIsREM9ZWR1P2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RD
+# bGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MG0GCCsGAQUFBzAChmFodHRwOi8v
+# Vk1XQ0EwMS53aW5hZC5tc3VkZW52ZXIuZWR1L0NlcnRFbnJvbGwvVk1XQ0EwMS53
+# aW5hZC5tc3VkZW52ZXIuZWR1X3dpbmFkLVZNV0NBMDEtQ0EoMSkuY3J0MCEGCSsG
+# AQQBgjcUAgQUHhIAVwBlAGIAUwBlAHIAdgBlAHIwDQYJKoZIhvcNAQELBQADggEB
+# AIpoMvUtE1iFHSbi7X/M9a+JBPpiAQZzEbq70is1mzdosSVTMN7QoWk4WzHCJBpX
+# Oh7cvBrTLf0m4EqJ7OwPY43ZW7MycOjgtk393CaCzr9BiEDjWzJf8r5bDDCodEFm
+# dodj3/el8nV4HapjiGnJKrhg0b3xRjPP4cvjtBltbqO7tngkpDu+m63X68aC3wrt
+# XwJulfsGeTbd0v4hkji9GCTpLT92mkJyJE04SA/thv4F7yNx1W5XCEWswZeGLiR5
+# 9C5AlUm1WrhjAaoyxabDJWfljV//qk+TeoC5CNQ7ZkqdxFBYPc5d2UdkmmiK76D+
+# qaobXtlVJ9wRYfFoOaUb5dQxggSyMIIErgIBATB5MGIxEzARBgoJkiaJk/IsZAEZ
+# FgNlZHUxGTAXBgoJkiaJk/IsZAEZFgltc3VkZW52ZXIxFTATBgoJkiaJk/IsZAEZ
+# FgV3aW5hZDEZMBcGA1UEAxMQd2luYWQtVk1XQ0EwMS1DQQITfwAAACITuo77mvOv
+# 9AABAAAAIjANBglghkgBZQMEAgEFAKBmMBgGCisGAQQBgjcCAQwxCjAIoAKAAKEC
+# gAAwGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQwLwYJKoZIhvcNAQkEMSIEIK3q
+# imHHNUu4jpApkOcHzq4tLys+zmocuvoKdNDip9pPMA0GCSqGSIb3DQEBAQUABIIB
+# AJ+Y06/Sgp47iaJgY+pHgynxqakcDvQMs/+T5lDUmvOW7Jnzg/2xE7r5Rc2wzx/Z
+# DgyX6+DLouiYgvGTX7TkgoAoExRbyq68lmcgjVc91A+VKml93HzzsblYrhqamldg
+# rWiol3LaNC08MKOc/xf4mLEO9Vn6374q5iK44WgMbNENBfC30cZeFXxWny3B3Gv3
+# ClCEzaKohPDsTEr13O4+pElpeAjWWqmTfEQ9m2fJJql1dfqg6tnzaw80D0ayZXbR
+# y9dZMiYXTZ8IMksEBiZtPtgIszRFy0bviln/zHVYuguEj8ndXhuBS5J5hmQ8Wtr3
+# YSh1C0KwLnZlCzmb/LHcH+mhggKiMIICngYJKoZIhvcNAQkGMYICjzCCAosCAQEw
+# aDBSMQswCQYDVQQGEwJCRTEZMBcGA1UEChMQR2xvYmFsU2lnbiBudi1zYTEoMCYG
+# A1UEAxMfR2xvYmFsU2lnbiBUaW1lc3RhbXBpbmcgQ0EgLSBHMgISESHWmadklz7x
+# +EJ+6RnMU0EUMAkGBSsOAwIaBQCggf0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEH
+# ATAcBgkqhkiG9w0BCQUxDxcNMTgwMTE2MDEzNzA4WjAjBgkqhkiG9w0BCQQxFgQU
+# ela2nb0wKMg6KP/Knvv2C+Ol1mYwgZ0GCyqGSIb3DQEJEAIMMYGNMIGKMIGHMIGE
+# BBRjuC+rYfWDkJaVBQsAJJxQKTPseTBsMFakVDBSMQswCQYDVQQGEwJCRTEZMBcG
+# A1UEChMQR2xvYmFsU2lnbiBudi1zYTEoMCYGA1UEAxMfR2xvYmFsU2lnbiBUaW1l
+# c3RhbXBpbmcgQ0EgLSBHMgISESHWmadklz7x+EJ+6RnMU0EUMA0GCSqGSIb3DQEB
+# AQUABIIBADMqq2Ux04SUhzJ1eoJyulmL7EYqz2hAbFrEtv5UjAWI0WNoa9IBPZbO
+# dX4NXQZr3yrSAakJIdXmJWQKjBrHpFZrXvPPkWWzqHa4J6N3rvst/o7FXxCLOZyN
+# ogvLT/41DE8MAue1Rvb7xcYL1Fix0ROouroIL+CR6AGw5oyuSi70h2TelxtusQgf
+# mu2Vo43QlAIDOodEnM0YfGdr1CA4tdsbTeny71QhS7+p/8mUwOLWGSPpHjZtfzJI
+# mqLjmNTqhmb7s4T3YJEhEmnZ8SInxY2Uc8+5p3o4cT1PUrkeQjnx83Pr6zVoR7WW
+# v9IVQBVQuhUH20ipB8PWHvlasKJmsKo=
+>>>>>>> origin/master
 # SIG # End signature block
