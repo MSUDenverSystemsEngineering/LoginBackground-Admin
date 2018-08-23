@@ -60,7 +60,7 @@ Try {
 	## Variables: Application
 	[string]$appVendor = 'MSU Denver'
 	[string]$appName = 'Login Background'
-	[string]$appVersion = 'Academic'
+	[string]$appVersion = 'Admin'
 	[string]$appArch = ''
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
@@ -181,7 +181,7 @@ Try {
 		}
 
 		# <Perform Uninstallation tasks here>
-		Remove-File -Path "${envSystem32Directory}\oobe\info\backgrounds\defaultBackground.jpg"
+		Remove-File -Path "${envSystem32Directory}\oobe\info\backgrounds\backgroundDefault.jpg"
 		Remove-RegistryKey -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\Background" -Name "OEMBackground"
 
 		##*===============================================
